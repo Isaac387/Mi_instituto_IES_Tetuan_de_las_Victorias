@@ -1,0 +1,229 @@
+@font-face {
+    font-family: "Inter";
+    src: url("../Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+    font-weight: 100 900;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: #1b365d;
+    background-color: #ffffff;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.pagina {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 50px 30px;
+}
+
+/* CABECERA */
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo {
+    width: 92px;
+    height: 50px;
+    object-fit: contain;
+    background-color: #ffffff;
+    border: 1px solid #1b365d;
+    border-radius: 8px;
+}
+
+.titulo h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.titulo p {
+    font-size: 12px;
+}
+
+.boton-volver {
+    padding: 8px 14px;
+    border: 1px solid #1b365d;
+    border-radius: 20px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* CONTENIDO */
+.contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.presentacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.presentacion-texto {
+    flex: 1;
+}
+
+.presentacion-texto h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.presentacion-texto p {
+    max-width: 380px;
+    margin-bottom: 28px;
+    font-size: 11px;
+    line-height: 1.35;
+    color: #000000;
+}
+button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+.boton {
+    display: inline-block;
+    padding: 9px 11px;
+    background-color: #1b365d;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.boton:hover {
+    background-color: #284b7a;
+}
+
+.presentacion-foto {
+    flex: 1;
+}
+
+.presentacion-foto img {
+    display: block;
+    width: 100%;
+    height: 264px;
+    object-fit: cover;
+    border: 1px solid #000000;
+    border-radius: 8px;
+}
+
+/* TARJETAS */
+.tarjetas {
+    display: flex;
+    gap: 30px;
+    padding: 0 10px;
+}
+
+.tarjeta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 20px 14px;
+    background-color: #f0f3f8;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.tarjeta img {
+    width: 60px;
+}
+
+.tarjeta h3 {
+    font-size: 17px;
+}
+
+.tarjeta p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #3d4f66;
+}
+
+/* PIE */
+.pie {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 15px;
+}
+
+.pie-columna {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 14px;
+}
+
+.pie-columna h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.pie-columna a:hover {
+    text-decoration: underline;
+}
+
+.punto-verde {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    background-color: #4cc38a;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+    .pagina {
+        padding: 30px 20px;
+    }
+
+    .cabecera {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .presentacion,
+    .tarjetas,
+    .pie {
+        flex-direction: column;
+    }
+
+    .presentacion {
+        gap: 30px;
+    }
+
+    .presentacion-foto,
+    .presentacion-foto img {
+        width: 100%;
+    }
+}

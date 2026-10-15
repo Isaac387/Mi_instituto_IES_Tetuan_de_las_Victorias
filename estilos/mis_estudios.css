@@ -1,0 +1,198 @@
+@font-face {
+    font-family: "Inter";
+    src: url("../Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+    font-weight: 100 900;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: #1b365d;
+    background-color: #ffffff;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.pagina {
+    display: grid;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 14px 35px 40px;
+}
+
+/* CABECERA */
+.cabecera {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 14px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.logo {
+    width: 62px;
+    height: 20px;
+    object-fit: contain;
+    background-color: #ffffff;
+    border: 1px solid #1b365d;
+    border-radius: 6px;
+}
+
+.boton-volver {
+    padding: 2px 6px;
+    border: 1px solid #1b365d;
+    border-radius: 10px;
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.boton {
+    display: inline-block;
+    padding: 9px 12px;
+    background-color: #1b365d;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* CONTENIDO */
+.contenido {
+    display: grid;
+    gap: 60px;
+}
+
+.presentacion,
+.camino {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 36px;
+}
+
+.presentacion-texto h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+.presentacion-texto p,
+.camino-texto p {
+    margin-bottom: 16px;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #8a96a8;
+}
+
+.presentacion-texto .boton {
+    margin-top: 12px;
+}
+
+.presentacion-foto img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+}
+
+.camino-foto img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.camino-texto h2 {
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 1.25;
+}
+
+/* PIE */
+.pie {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.pie-marca h3 {
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.pie-marca p {
+    max-width: 280px;
+    font-size: 10px;
+    line-height: 1.4;
+    color: #8a96a8;
+}
+
+.pie-columna {
+    display: grid;
+    align-content: start;
+    gap: 8px;
+    font-size: 10px;
+    color: #8a96a8;
+}
+
+.pie-columna h4 {
+    margin-bottom: 4px;
+    font-size: 10px;
+    color: #1b365d;
+}
+
+.pie-columna a:hover {
+    text-decoration: underline;
+}
+
+.iconos {
+    display: grid;
+    gap: 10px;
+}
+
+.iconos a {
+    color: #1b365d;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .pagina {
+        gap: 40px;
+        padding: 14px 20px 30px;
+    }
+
+    .contenido {
+        gap: 40px;
+    }
+
+    .presentacion,
+    .camino {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .pie {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pie-marca {
+        grid-column: 1 / -1;
+    }
+}
